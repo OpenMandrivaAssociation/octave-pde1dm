@@ -2,7 +2,7 @@
 
 Summary:	1D Partial Differential Equation Solver for MATLAB and Octave
 Name:		octave-pde1dm
-Version:	1.3
+Version:	1.3.0
 Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
