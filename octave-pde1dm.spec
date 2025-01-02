@@ -2,7 +2,7 @@
 
 Summary:	1D Partial Differential Equation Solver for MATLAB and Octave
 Name:		octave-pde1dm
-Version:	1.3.0
+Version:	1.3
 Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
@@ -36,7 +36,11 @@ only small changes.
 %prep
 %autosetup -p1 -n %{octpkg}-%{version}
 # remove non utf-8 chars
-sed -i -e "s/[\x80-\xFF]//g" multiprod.m
+for i in multiprod.m
+do
+    iconv -f iso-8859-1 -t utf-8 -o $i{.utf8,}
+    mv $i{.utf8,}
+done
 
 %build
 %octave_pkg_build
