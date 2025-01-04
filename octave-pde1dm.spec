@@ -11,7 +11,7 @@ Url:		https://github.com/wgreene310/pde1dm/
 Source0:	https://github.com/wgreene310/pde1dm/archive/v%{version}/pde1dm-%{version}.tar.gz
 
 BuildRequires:  octave-devel >= 7.1.0
-BuildRequires:  glibc-static-devel gettext-devel
+BuildRequires:  locales-extra-charsets
 
 Requires:	octave(api) = %{octave_api}
 
